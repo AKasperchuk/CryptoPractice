@@ -40,7 +40,7 @@ namespace HostApp
             var encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
             using var msEncrypt = new MemoryStream();
-            msEncrypt.Write(aesAlg.IV, 0, aesAlg.IV.Length); // Prepend IV to the ciphertext
+            msEncrypt.Write(aesAlg.IV, 0, aesAlg.IV.Length); 
             using var csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write);
             using (var swEncrypt = new StreamWriter(csEncrypt))
             {

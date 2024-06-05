@@ -7,7 +7,6 @@ namespace HostApp
         static void Main()
         {
             var service = new CryptoService();
-            // service.EncryptAesKey();
             Console.WriteLine("Handshake complete");
             string line = "";
             while(!string.IsNullOrEmpty(line = Console.ReadLine()))

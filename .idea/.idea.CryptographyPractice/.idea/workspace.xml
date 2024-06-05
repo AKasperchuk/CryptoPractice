@@ -9,52 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="658a53c4-d5ae-4e2e-b89b-9c2b8ec17dd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ClientApp/ClientApp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/CryptoService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/ClientApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/ClientApp.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/ClientApp.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/Debug/net5.0/ClientApp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/Debug/net5.0/ClientApp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/Debug/net5.0/ClientApp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/Debug/net5.0/ClientApp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/Debug/net5.0/ClientApp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/CryptoService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/HostApp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/bin/Debug/net5.0/HostApp.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/bin/Debug/net5.0/HostApp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/bin/Debug/net5.0/HostApp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/bin/Debug/net5.0/HostApp.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/bin/Debug/net5.0/HostApp.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/bin/Debug/net5.0/HostApp.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/HostApp.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/ref/HostApp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/Debug/net5.0/refint/HostApp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/HostApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/HostApp.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/HostApp.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostApp/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CryptographyPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CryptographyPractice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/CryptoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/CryptoService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +110,17 @@
       <workItem from="1717243740046" duration="7263000" />
       <workItem from="1717262893692" duration="3607000" />
       <workItem from="1717268236637" duration="1574000" />
+      <workItem from="1717602457898" duration="2240000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1717609503482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717609503482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,75 +129,12 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HostApp/CryptoService.cs</url>
-          <line>21</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\CryptoService.cs" initialLine="21" containingFunctionPresentation="Method 'GetRsaKey'">
-            <startOffsets>
-              <option value="485" />
-            </startOffsets>
-            <endOffsets>
-              <option value="575" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HostApp/CryptoService.cs</url>
-          <line>27</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\CryptoService.cs" initialLine="28" containingFunctionPresentation="Method 'WriteAesKey'">
-            <startOffsets>
-              <option value="705" />
-            </startOffsets>
-            <endOffsets>
-              <option value="752" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HostApp/CryptoService.cs</url>
-          <line>28</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\CryptoService.cs" initialLine="29" containingFunctionPresentation="Method 'WriteAesKey'">
-            <startOffsets>
-              <option value="765" />
-            </startOffsets>
-            <endOffsets>
-              <option value="830" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HostApp/CryptoService.cs</url>
-          <line>29</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\CryptoService.cs" initialLine="30" containingFunctionPresentation="Method 'WriteAesKey'">
-            <startOffsets>
-              <option value="843" />
-            </startOffsets>
-            <endOffsets>
-              <option value="888" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HostApp/CryptoService.cs</url>
-          <line>30</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\CryptoService.cs" initialLine="31" containingFunctionPresentation="Method 'WriteAesKey'">
-            <startOffsets>
-              <option value="901" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1017" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ClientApp/Program.cs</url>
           <line>18</line>
@@ -270,110 +173,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>82</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="82" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3047" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3086" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>84</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="84" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3145" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3182" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>92</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="92" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3440" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3441" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>91</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="91" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3407" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3419" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>90</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="90" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3354" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3378" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>86</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="86" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3213" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3248" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>88</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="88" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3287" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3307" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ClientApp/CryptoService.cs</url>
-          <line>95</line>
-          <properties documentPath="D:\NIX\Инфобез\Криптография практика\CryptoPractice\ClientApp\CryptoService.cs" initialLine="95" containingFunctionPresentation="Method 'ReadFileData'">
-            <startOffsets>
-              <option value="3513" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3546" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -18,20 +18,6 @@ namespace ClientApp
                 {
                     Console.WriteLine(line);
                 }
-                // var text = new string[] { };
-                // while (true)
-                // {
-                //     if (!Enumerable.SequenceEqual(text, service.ReadFileData()))
-                //     {
-                //         text = service.ReadFileData();
-                //         foreach (var line in text)
-                //         {
-                //             Console.WriteLine(line);
-                //         }
-                //
-                //         Thread.Sleep(5000);
-                //     }
-                // }
             }
             catch (Exception ex)
             {

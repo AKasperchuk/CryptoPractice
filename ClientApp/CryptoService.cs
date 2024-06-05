@@ -26,7 +26,6 @@ namespace ClientApp
             File.WriteAllBytes("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/rsa.pem", publicKey);
             var privateKey = rsa.ExportRSAPrivateKey();
             File.AppendAllText("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
-            // Thread.Sleep(30000);
         }
 
         private void GetAesKey()
