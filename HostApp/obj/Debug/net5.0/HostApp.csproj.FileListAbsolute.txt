@@ -1,0 +1,16 @@
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\bin\Debug\net5.0\HostApp.exe
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\bin\Debug\net5.0\HostApp.deps.json
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\bin\Debug\net5.0\HostApp.runtimeconfig.json
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\bin\Debug\net5.0\HostApp.runtimeconfig.dev.json
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\bin\Debug\net5.0\HostApp.dll
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\bin\Debug\net5.0\HostApp.pdb
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.csproj.AssemblyReference.cache
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.AssemblyInfoInputs.cache
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.AssemblyInfo.cs
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.csproj.CoreCompileInputs.cache
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.dll
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\refint\HostApp.dll
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.pdb
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\HostApp.genruntimeconfig.cache
+D:\NIX\Инфобез\Криптография практика\CryptoPractice\HostApp\obj\Debug\net5.0\ref\HostApp.dll
