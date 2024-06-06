@@ -8,6 +8,7 @@ namespace ClientApp
 {
     public class CryptoService
     {
+        private string dirPath = "../../../../Files/";
         private RSACryptoServiceProvider rsa;
         private byte[] aesKey;
         private int aesKeyCount = 0;
@@ -23,15 +24,15 @@ namespace ClientApp
         {
             rsa = new RSACryptoServiceProvider(2048);
             var publicKey = rsa.ExportSubjectPublicKeyInfo();
-            File.WriteAllBytes("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/rsa.pem", publicKey);
+            File.WriteAllBytes($"{dirPath}/rsa.pem", publicKey);
             var privateKey = rsa.ExportRSAPrivateKey();
-            File.AppendAllText("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
+            File.AppendAllText($"{dirPath}/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
         }
 
         private void GetAesKey()
         {
-            string aesKeyFilePath = "D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/aes.txt";
-            string rsaPrivateKeysFilePath = "D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/rsa_private.txt";
+            string aesKeyFilePath = $"{dirPath}/aes.txt";
+            string rsaPrivateKeysFilePath = $"{dirPath}/rsa_private.txt";
 
             while (!File.Exists(aesKeyFilePath))
             {
@@ -72,7 +73,7 @@ namespace ClientApp
 
         public string[] ReadFileData()
         {
-            string filePath = "D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/text.txt";
+            string filePath = $"{dirPath}/text.txt";
             while (!File.Exists(filePath))
             {
                 Console.WriteLine("Waiting for the text file to be created...");

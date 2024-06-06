@@ -6,6 +6,7 @@ namespace HostApp
 {
     public class CryptoService
     {
+        private string dirPath = "../../../../Files/";
         private readonly byte[] _aesKey = new byte[32];
         private byte[] _rsaKey;
 
@@ -19,7 +20,7 @@ namespace HostApp
 
         private void GetRsaKey()
         {
-            _rsaKey = File.ReadAllBytes("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/rsa.pem");
+            _rsaKey = File.ReadAllBytes($"{dirPath}/rsa.pem");
         }
 
         private void WriteAesKey()
@@ -28,7 +29,7 @@ namespace HostApp
             rsa.ImportSubjectPublicKeyInfo(_rsaKey, out _);
             var encrypted = rsa.Encrypt(_aesKey, RSAEncryptionPadding.Pkcs1);
             var data = Convert.ToBase64String(encrypted);
-            File.AppendAllText("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/aes.txt", data + Environment.NewLine);
+            File.AppendAllText($"{dirPath}/aes.txt", data + Environment.NewLine);
         }
 
         public string EncryptWithAes(string plainText)
@@ -52,12 +53,12 @@ namespace HostApp
         public void WriteInput(string input)
         {
             var encrypted = EncryptWithAes(input);
-            File.AppendAllText("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/text.txt", encrypted + Environment.NewLine);
+            File.AppendAllText($"{dirPath}/text.txt", encrypted + Environment.NewLine);
         }
 
         public void Terminate()
         {
-            File.AppendAllText("D:/NIX/Инфобез/Криптография практика/CryptoPractice/Files/text.txt", "#" + Environment.NewLine);
+            File.AppendAllText($"{dirPath}/text.txt", "#" + Environment.NewLine);
         }
     }
 }
