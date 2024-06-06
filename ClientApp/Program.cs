@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Linq;
-using System.Threading;
 
 namespace ClientApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var service = new CryptoService();
             Console.WriteLine("Handshake complete");

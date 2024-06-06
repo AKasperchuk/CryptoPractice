@@ -8,7 +8,7 @@ namespace HostApp
         {
             var service = new CryptoService();
             Console.WriteLine("Handshake complete");
-            string line = "";
+            var line = "";
             while(!string.IsNullOrEmpty(line = Console.ReadLine()))
             {
                 service.WriteInput(line);

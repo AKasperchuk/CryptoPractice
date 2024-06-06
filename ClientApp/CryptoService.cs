@@ -8,11 +8,11 @@ namespace ClientApp
 {
     public class CryptoService
     {
-        private string dirPath = "../../../../Files/";
-        private RSACryptoServiceProvider rsa;
-        private byte[] aesKey;
-        private int aesKeyCount = 0;
-        private int rsaKeyCount = 0;
+        private const string _dirPath = "../../../../Files/";
+        private RSACryptoServiceProvider _rsa;
+        private byte[] _aesKey;
+        private int _aesKeyCount;
+        private int _rsaKeyCount;
 
         public CryptoService()
         {
@@ -22,17 +22,17 @@ namespace ClientApp
 
         private void WriteRsaKeys()
         {
-            rsa = new RSACryptoServiceProvider(2048);
-            var publicKey = rsa.ExportSubjectPublicKeyInfo();
-            File.WriteAllBytes($"{dirPath}/rsa.pem", publicKey);
-            var privateKey = rsa.ExportRSAPrivateKey();
-            File.AppendAllText($"{dirPath}/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
+            _rsa = new RSACryptoServiceProvider(2048);
+            var publicKey = _rsa.ExportSubjectPublicKeyInfo();
+            File.WriteAllBytes($"{_dirPath}/rsa.pem", publicKey);
+            var privateKey = _rsa.ExportRSAPrivateKey();
+            File.AppendAllText($"{_dirPath}/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
         }
 
         private void GetAesKey()
         {
-            string aesKeyFilePath = $"{dirPath}/aes.txt";
-            string rsaPrivateKeysFilePath = $"{dirPath}/rsa_private.txt";
+            var aesKeyFilePath = $"{_dirPath}/aes.txt";
+            var rsaPrivateKeysFilePath = $"{_dirPath}/rsa_private.txt";
 
             while (!File.Exists(aesKeyFilePath))
             {
@@ -42,21 +42,21 @@ namespace ClientApp
 
             var data = File.ReadAllLines(aesKeyFilePath);
             var privateKeys = File.ReadAllLines(rsaPrivateKeysFilePath);
-            rsa.ImportRSAPrivateKey(Convert.FromBase64String(privateKeys[rsaKeyCount]), out _);
-            rsaKeyCount++;
-            aesKey = rsa.Decrypt(Convert.FromBase64String(data[aesKeyCount]), RSAEncryptionPadding.Pkcs1);
-            aesKeyCount++;
+            _rsa.ImportRSAPrivateKey(Convert.FromBase64String(privateKeys[_rsaKeyCount]), out _);
+            _rsaKeyCount++;
+            _aesKey = _rsa.Decrypt(Convert.FromBase64String(data[_aesKeyCount]), RSAEncryptionPadding.Pkcs1);
+            _aesKeyCount++;
         }
 
         private string DecryptAes(string text)
         {
             var fullCipher = Convert.FromBase64String(text);
 
-            using Aes aesAlg = Aes.Create();
-            aesAlg.Key = aesKey;
+            using var aesAlg = Aes.Create();
+            aesAlg.Key = _aesKey;
 
-            byte[] iv = new byte[aesAlg.BlockSize / 8];
-            byte[] cipherText = new byte[fullCipher.Length - iv.Length];
+            var iv = new byte[aesAlg.BlockSize / 8];
+            var cipherText = new byte[fullCipher.Length - iv.Length];
 
             Array.Copy(fullCipher, iv, iv.Length);
             Array.Copy(fullCipher, iv.Length, cipherText, 0, cipherText.Length);
@@ -73,7 +73,7 @@ namespace ClientApp
 
         public string[] ReadFileData()
         {
-            string filePath = $"{dirPath}/text.txt";
+            var filePath = $"{_dirPath}/text.txt";
             while (!File.Exists(filePath))
             {
                 Console.WriteLine("Waiting for the text file to be created...");
@@ -82,19 +82,17 @@ namespace ClientApp
 
             var text = File.ReadAllLines(filePath);
             var resList = new List<string>();
-            for (int i = 0; i < text.Length; i++)
+            for (var i = 0; i < text.Length; i++)
             {
-                if (!string.IsNullOrEmpty(text[i]))
+                if (string.IsNullOrEmpty(text[i])) continue;
+                if (text[i] == "#" )
                 {
-                    if (text[i] == "#" )
-                    {
-                        if (i < text.Length - 1)
-                            GetAesKey();
-                    }
-                    else
-                    {
-                        resList.Add(DecryptAes(text[i]));
-                    }
+                    if (i < text.Length - 1)
+                        GetAesKey();
+                }
+                else
+                {
+                    resList.Add(DecryptAes(text[i]));
                 }
             }
             return resList.ToArray();
