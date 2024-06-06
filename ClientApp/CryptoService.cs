@@ -1,8 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Threading;
+using Dapper;
+using Microsoft.Data.SqlClient;
 
 namespace ClientApp
 {
@@ -13,11 +17,19 @@ namespace ClientApp
         private byte[] _aesKey;
         private int _aesKeyCount;
         private int _rsaKeyCount;
+        private string connectionString;
 
         public CryptoService()
         {
+            GetEnv();
             WriteRsaKeys();
             GetAesKey();
+        }
+
+        private void GetEnv()
+        {
+            DotNetEnv.Env.TraversePath().Load();
+            connectionString = DotNetEnv.Env.GetString("ConnectionString");
         }
 
         private void WriteRsaKeys()
@@ -26,9 +38,17 @@ namespace ClientApp
             var publicKey = _rsa.ExportSubjectPublicKeyInfo();
             File.WriteAllBytes($"{_dirPath}/rsa.pem", publicKey);
             var privateKey = _rsa.ExportRSAPrivateKey();
-            File.AppendAllText($"{_dirPath}/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
+            using IDbConnection connection = new SqlConnection(connectionString);
+            connection.Execute("INSERTKEY", new {key = Convert.ToBase64String(privateKey)}, commandType: CommandType.StoredProcedure);
+            // File.AppendAllText($"{_dirPath}/rsa_private.txt", Convert.ToBase64String(privateKey) + Environment.NewLine);
         }
 
+        private string[] GetRsaKeys()
+        {
+            using IDbConnection connection = new SqlConnection(connectionString);
+            return (connection.Query<string>("GetAllKeys",  commandType: CommandType.StoredProcedure)).ToArray();
+        }
+        
         private void GetAesKey()
         {
             var aesKeyFilePath = $"{_dirPath}/aes.txt";
@@ -41,7 +61,7 @@ namespace ClientApp
             }
 
             var data = File.ReadAllLines(aesKeyFilePath);
-            var privateKeys = File.ReadAllLines(rsaPrivateKeysFilePath);
+            var privateKeys = GetRsaKeys();
             _rsa.ImportRSAPrivateKey(Convert.FromBase64String(privateKeys[_rsaKeyCount]), out _);
             _rsaKeyCount++;
             _aesKey = _rsa.Decrypt(Convert.FromBase64String(data[_aesKeyCount]), RSAEncryptionPadding.Pkcs1);
